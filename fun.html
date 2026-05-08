@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Fun</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .fun-btn { cursor: pointer; margin: 10px; border: none; padding: 15px; border-radius: 15px; background: white; color: #ff758c; font-weight: bold; transition: 0.3s; }
-        .fun-btn:hover { background: #ff758c; color: white; transform: scale(1.1); }
-    </style>
 </head>
 <body>
-    <div id="cursor"></div>
     <div id="hearts-container"></div>
-    <nav><a href="index.html">Home</a><a href="love.html">Letter</a><a href="memories.html">Memories</a><a href="fun.html">Fun</a><a href="special.html">Special</a></nav>
+    
+    <!-- Custom Alert Modal -->
+    <div id="custom-alert">
+        <div style="font-size: 3rem;">💝</div>
+        <h3 id="alert-msg"></h3>
+    </div>
 
     <div class="container">
-        <h2 class="special-font">Interactive Love</h2>
-        <p>Click these buttons for a surprise!</p>
-        <button class="fun-btn" onclick="funResponse('love')">Do you love me?</button>
-        <button class="fun-btn" onclick="funResponse('kiss')">Kiss me 😗</button>
-        <button class="fun-btn" onclick="funResponse('miss')">Miss me?</button>
+        <h2 style="font-family: 'Dancing Script';">Let's Play ✨</h2>
+        <button class="btn" onclick="showMessage('I knew it! You are hopelessly in love with me 😏❤️')">Do you love me?</button>
+        <button class="btn" onclick="showMessage('Mmuuuaaahhh! Virtual Kiss Sent 💋')">Kiss me 😗</button>
+        <button class="btn" onclick="showMessage('I miss you 100x more than you miss me! 🥺')">Miss me?</button>
     </div>
+
+    <nav><a href="index.html">🏠</a><a href="love.html">💌</a><a href="memories.html">📸</a><a href="fun.html">✨</a><a href="special.html">⌛</a></nav>
     <script src="script.js"></script>
 </body>
 </html>
