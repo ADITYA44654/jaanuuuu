@@ -1,27 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Everything ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="hearts-container"></div>
-    <audio id="bg-music" loop><source src="Jaanu.m4a" type="audio/mp4"></audio>
-
-    <div class="container">
-        <div style="font-size: 4rem;">👑</div>
-        <h1 class="special-font" style="font-family: 'Dancing Script'; font-size: 3rem;">Hey My Queen</h1>
-        <p>You make my life feel like a beautiful dream.</p>
-        <a href="love.html" class="btn">Enter Our World ❤️</a>
+    
+    <div class="glass-card">
+        <div style="font-size: 3rem; margin-bottom: 10px;">✨</div>
+        <h1>Hey My Life,</h1>
+        <p style="margin-top: 15px;">Sirf 2-3 mahine hue hain, par aisa lagta hai jaise sadiyon se tumhe jaanta hoon. Tum sirf meri girlfriend nahi, mera sukoon ho.</p>
+        <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.8;">(Screen par kahin bhi touch karo music ke liye 🎵)</p>
+        <a href="love.html" class="btn">Enter My Heart ❤️</a>
     </div>
 
     <nav>
-        <a href="index.html">🏠</a>
+        <a href="index.html" class="active">🏠</a>
         <a href="love.html">💌</a>
         <a href="memories.html">📸</a>
         <a href="fun.html">✨</a>
         <a href="special.html">⌛</a>
     </nav>
-    <script src="script.js"></script>
+
+    <script src="music.js"></script>
+    <script>
+        function createHeart() {
+            const h = document.createElement('div');
+            h.classList.add('heart'); h.innerHTML = '❤️';
+            h.style.left = Math.random() * 100 + 'vw';
+            h.style.animationDuration = Math.random() * 2 + 3 + 's';
+            document.getElementById('hearts-container').appendChild(h);
+            setTimeout(() => h.remove(), 5000);
+        }
+        setInterval(createHeart, 400);
+    </script>
 </body>
 </html>

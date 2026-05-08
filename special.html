@@ -3,30 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extra Special</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="cursor"></div>
-    <div id="hearts-container"></div>
-    <nav><a href="index.html">Home</a><a href="love.html">Letter</a><a href="memories.html">Memories</a><a href="fun.html">Fun</a><a href="special.html">Special</a></nav>
-
-    <div class="container">
-        <h2 class="special-font">Together Forever</h2>
-        <p>We’ve been together for ❤️</p>
-        <div id="timer" style="font-size: 2rem; font-weight: bold; margin: 20px 0; color: white; text-shadow: 0 0 10px rgba(255,255,255,0.5);"></div>
-        <p>"No matter what happens, I will always choose you."</p>
-        <div style="font-size: 4rem; animation: pulse 1.5s infinite;">💖</div>
+    <div class="glass-card">
+        <h2>Hamara Safar...</h2>
+        <div id="timer" style="font-size: 1.5rem; font-weight: bold; margin: 20px 0;"></div>
+        <p>Har din, har ghanta mere liye special hai kyuki tum saath ho. ❤️</p>
+        <div style="font-size: 3rem; animation: pulse 1.5s infinite; margin-top: 20px;">💖</div>
     </div>
+    <nav><a href="index.html">🏠</a><a href="love.html">💌</a><a href="memories.html">📸</a><a href="fun.html">✨</a><a href="special.html" class="active">⌛</a></nav>
 
-    <style>
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.2); opacity: 0.8; }
-            100% { transform: scale(1); opacity: 1; }
+    <script src="music.js"></script>
+    <script>
+        function update() {
+            const start = new Date("2024-03-15"); // CHANGE DATE HERE
+            const diff = new Date() - start;
+            const d = Math.floor(diff/(1000*60*60*24));
+            const h = Math.floor((diff/(1000*60*60))%24);
+            const m = Math.floor((diff/(1000*60))%60);
+            document.getElementById('timer').innerText = `${d} Days, ${h} Hours, ${m} Mins`;
         }
-    </style>
-    <script src="script.js"></script>
-    <script>updateCounter();</script>
+        setInterval(update, 1000); update();
+    </script>
 </body>
 </html>

@@ -1,26 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="hearts-container"></div>
-    
-    <!-- Custom Alert Modal -->
-    <div id="custom-alert">
-        <div style="font-size: 3rem;">💝</div>
-        <h3 id="alert-msg"></h3>
+    <div id="popup">
+        <div id="popup-icon" style="font-size: 3rem;">💖</div>
+        <p id="popup-text" style="font-weight: bold; color: #ff4d6d; margin-top: 10px;"></p>
+        <button class="btn" onclick="closePopup()" style="padding: 10px 20px;">Love You Too!</button>
     </div>
 
-    <div class="container">
-        <h2 style="font-family: 'Dancing Script';">Let's Play ✨</h2>
-        <button class="btn" onclick="showMessage('I knew it! You are hopelessly in love with me 😏❤️')">Do you love me?</button>
-        <button class="btn" onclick="showMessage('Mmuuuaaahhh! Virtual Kiss Sent 💋')">Kiss me 😗</button>
-        <button class="btn" onclick="showMessage('I miss you 100x more than you miss me! 🥺')">Miss me?</button>
+    <div class="glass-card">
+        <h2>Chalo Thoda Smile Karo! 😊</h2>
+        <button class="btn" onclick="showPopup('I knew it! Tum mujhse bahut zyada pyaar karti ho 😏❤️', '🔥')">Do you love me?</button>
+        <button class="btn" onclick="showPopup('Mmmuuuaaahhh! Ye virtual kiss seedha tumhare gaal par 💋', '😘')">Kiss me 😗</button>
+        <button class="btn" onclick="showPopup('Main toh har pal tumhe miss karta hoon... tumse bhi zyada! 🥺', '🧸')">Miss me?</button>
     </div>
 
-    <nav><a href="index.html">🏠</a><a href="love.html">💌</a><a href="memories.html">📸</a><a href="fun.html">✨</a><a href="special.html">⌛</a></nav>
-    <script src="script.js"></script>
+    <nav><a href="index.html">🏠</a><a href="love.html">💌</a><a href="memories.html">📸</a><a href="fun.html" class="active">✨</a><a href="special.html">⌛</a></nav>
+
+    <script src="music.js"></script>
+    <script>
+        function showPopup(txt, icon) {
+            document.getElementById('popup-text').innerText = txt;
+            document.getElementById('popup-icon').innerText = icon;
+            document.getElementById('popup').classList.add('show');
+        }
+        function closePopup() { document.getElementById('popup').classList.remove('show'); }
+    </script>
 </body>
 </html>

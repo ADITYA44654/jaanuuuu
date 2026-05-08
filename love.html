@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Letter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="cursor"></div>
     <div id="hearts-container"></div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="love.html">Letter</a>
-        <a href="memories.html">Memories</a>
-        <a href="fun.html">Fun</a>
-        <a href="special.html">Special</a>
-    </nav>
-
-    <div class="container">
-        <h2 class="special-font">A Message From My Heart...</h2>
-        <p id="love-text" style="font-style: italic; line-height: 1.8;"></p>
+    <div class="glass-card">
+        <h2 style="font-size: 2rem;">Mera Pyaara Sa Sach...</h2>
+        <p id="typewriter" style="font-style: italic; margin-top: 20px; font-size: 1.1rem; min-height: 200px;"></p>
     </div>
 
-    <script src="script.js"></script>
+    <nav>
+        <a href="index.html">🏠</a>
+        <a href="love.html" class="active">💌</a>
+        <a href="memories.html">📸</a>
+        <a href="fun.html">✨</a>
+        <a href="special.html">⌛</a>
+    </nav>
+
+    <script src="music.js"></script>
     <script>
-        const letter = "From the moment you came into my life, everything changed for the better. You are not just my girlfriend, you are my peace, my happiness, and my safe place. Every second I spend with you is a memory I treasure. I may not be perfect, but my love for you is real, pure, and forever. I promise to hold your hand through every storm. ❤️";
-        typeWriter("love-text", letter, 50);
+        const text = "Pata hai, log kehte hain 2-3 mahine bahut kam hote hain kisi ko janne ke liye... par mere liye ye 2-3 mahine meri zindagi ke sabse khoobsurat din rahe hain. Tumse baat karna, tumhari fikr karna, aur har waqt bas tumhare baare mein sochna—ye ab meri aadat ban chuki hai. I may not be the best, but I promise I will be yours forever. ❤️";
+        let i = 0;
+        function type() {
+            if (i < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(i);
+                i++; setTimeout(type, 50);
+            }
+        }
+        type();
     </script>
 </body>
 </html>
