@@ -3,40 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For You ❤️</title>
+    <title>Madam Aapke liye❤️</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></script>
 </head>
 <body>
 
-    <!-- Background Elements -->
-    <div id="hearts-container"></div>
+    <!-- Background -->
     <div class="gradient-bg"></div>
+    <div id="hearts-container"></div>
 
-    <!-- Music Element -->
+    <!-- Background Music -->
     <audio id="bg-music" loop>
         <source src="Jaanu.m4a" type="audio/mp4">
     </audio>
 
-    <!-- Music Control Button -->
-    <div class="music-btn" onclick="toggleMusic()">
-        <span id="music-icon">🎵</span>
-    </div>
-
-    <!-- Main Content Container (Isme pages load honge) -->
+    <!-- Main Content -->
     <main id="main-content">
-        <!-- Default: Home Page -->
         <div class="glass-card animate-in">
             <div class="profile-pic">
-                <img src="https://i.ibb.co/SwW9HDc7/IMG-20260303-202411-125.jpg" alt="You">
+                <img src="https://i.ibb.co/SwW9HDc7/IMG-20260303-202411-125.jpg" alt="Love">
             </div>
-            <h1 class="special-font">Hey My Life...</h1>
-            <p>Ye chota sa corner sirf tumhare liye banaya hai. Tab tak, jab tak hum saath hain.</p>
-            <button class="btn" onclick="loadPage('love')">Enter My Heart</button>
+            <h1 class="special-font">Hey Jaanuu... ❤️</h1>
+            <p>January mein dosti hui thi, par 1 March ke baad se tumhare aur mere beech kuch chalne laga tha. Tab se har pal sirf tumhara hai.</p>
+            <button class="btn" onclick="loadPage('love')">Hamari Kahani Dekho</button>
         </div>
     </main>
 
-    <!-- Navigation Bar -->
+    <!-- Navigation -->
     <nav>
         <a href="javascript:void(0)" onclick="loadPage('home')">🏠</a>
         <a href="javascript:void(0)" onclick="loadPage('love')">💌</a>
@@ -45,11 +38,11 @@
         <a href="javascript:void(0)" onclick="loadPage('special')">⌛</a>
     </nav>
 
-    <!-- Custom Alert Popup -->
+    <!-- Custom Popup -->
     <div id="popup">
-        <div id="popup-icon">💝</div>
+        <div id="popup-icon">💖</div>
         <p id="popup-text"></p>
-        <button class="btn-small" onclick="closePopup()">Close</button>
+        <button class="btn-small" onclick="closePopup()">Pyaar Tumse ❤️</button>
     </div>
 
     <script src="script.js"></script>
