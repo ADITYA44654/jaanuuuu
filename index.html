@@ -3,39 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Everything ❤️</title>
+    <title>For You ❤️</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></script>
 </head>
 <body>
+
+    <!-- Background Elements -->
     <div id="hearts-container"></div>
-    
-    <div class="glass-card">
-        <div style="font-size: 3rem; margin-bottom: 10px;">✨</div>
-        <h1>Hey My Life,</h1>
-        <p style="margin-top: 15px;">Sirf 2-3 mahine hue hain, par aisa lagta hai jaise sadiyon se tumhe jaanta hoon. Tum sirf meri girlfriend nahi, mera sukoon ho.</p>
-        <p style="font-size: 0.9rem; margin-top: 10px; opacity: 0.8;">(Screen par kahin bhi touch karo music ke liye 🎵)</p>
-        <a href="love.html" class="btn">Enter My Heart ❤️</a>
+    <div class="gradient-bg"></div>
+
+    <!-- Music Element -->
+    <audio id="bg-music" loop>
+        <source src="Jaanu.m4a" type="audio/mp4">
+    </audio>
+
+    <!-- Music Control Button -->
+    <div class="music-btn" onclick="toggleMusic()">
+        <span id="music-icon">🎵</span>
     </div>
 
+    <!-- Main Content Container (Isme pages load honge) -->
+    <main id="main-content">
+        <!-- Default: Home Page -->
+        <div class="glass-card animate-in">
+            <div class="profile-pic">
+                <img src="https://i.ibb.co/SwW9HDc7/IMG-20260303-202411-125.jpg" alt="You">
+            </div>
+            <h1 class="special-font">Hey My Life...</h1>
+            <p>Ye chota sa corner sirf tumhare liye banaya hai. Tab tak, jab tak hum saath hain.</p>
+            <button class="btn" onclick="loadPage('love')">Enter My Heart</button>
+        </div>
+    </main>
+
+    <!-- Navigation Bar -->
     <nav>
-        <a href="index.html" class="active">🏠</a>
-        <a href="love.html">💌</a>
-        <a href="memories.html">📸</a>
-        <a href="fun.html">✨</a>
-        <a href="special.html">⌛</a>
+        <a href="javascript:void(0)" onclick="loadPage('home')">🏠</a>
+        <a href="javascript:void(0)" onclick="loadPage('love')">💌</a>
+        <a href="javascript:void(0)" onclick="loadPage('memories')">📸</a>
+        <a href="javascript:void(0)" onclick="loadPage('fun')">✨</a>
+        <a href="javascript:void(0)" onclick="loadPage('special')">⌛</a>
     </nav>
 
-    <script src="music.js"></script>
-    <script>
-        function createHeart() {
-            const h = document.createElement('div');
-            h.classList.add('heart'); h.innerHTML = '❤️';
-            h.style.left = Math.random() * 100 + 'vw';
-            h.style.animationDuration = Math.random() * 2 + 3 + 's';
-            document.getElementById('hearts-container').appendChild(h);
-            setTimeout(() => h.remove(), 5000);
-        }
-        setInterval(createHeart, 400);
-    </script>
+    <!-- Custom Alert Popup -->
+    <div id="popup">
+        <div id="popup-icon">💝</div>
+        <p id="popup-text"></p>
+        <button class="btn-small" onclick="closePopup()">Close</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
