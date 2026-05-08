@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="hearts-container"></div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="love.html">Letter</a>
+        <a href="memories.html">Memories</a>
+        <a href="fun.html">Fun</a>
+        <a href="special.html">Special</a>
+    </nav>
+
+    <div class="container">
+        <h2 class="special-font">A Message From My Heart...</h2>
+        <p id="love-text" style="font-style: italic; line-height: 1.8;"></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const letter = "From the moment you came into my life, everything changed for the better. You are not just my girlfriend, you are my peace, my happiness, and my safe place. Every second I spend with you is a memory I treasure. I may not be perfect, but my love for you is real, pure, and forever. I promise to hold your hand through every storm. ❤️";
+        typeWriter("love-text", letter, 50);
+    </script>
+</body>
+</html>

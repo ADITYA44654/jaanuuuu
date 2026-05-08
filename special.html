@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Special</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="hearts-container"></div>
+    <nav><a href="index.html">Home</a><a href="love.html">Letter</a><a href="memories.html">Memories</a><a href="fun.html">Fun</a><a href="special.html">Special</a></nav>
+
+    <div class="container">
+        <h2 class="special-font">Together Forever</h2>
+        <p>We’ve been together for ❤️</p>
+        <div id="timer" style="font-size: 2rem; font-weight: bold; margin: 20px 0; color: white; text-shadow: 0 0 10px rgba(255,255,255,0.5);"></div>
+        <p>"No matter what happens, I will always choose you."</p>
+        <div style="font-size: 4rem; animation: pulse 1.5s infinite;">💖</div>
+    </div>
+
+    <style>
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+    <script src="script.js"></script>
+    <script>updateCounter();</script>
+</body>
+</html>
